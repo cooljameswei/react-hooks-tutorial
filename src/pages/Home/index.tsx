@@ -8,7 +8,7 @@ const Home = () => {
     };
     return (
         <>
-            <h1>This is HomePage</h1>
+            <h1 className="text-3xl font-bold underline">This is HomePage</h1>
             <div>
                 <button type="button" onClick={handleIncrease}>
                     Increase
