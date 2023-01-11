@@ -4,7 +4,7 @@ import { userFormData, UserFormItem } from "./userform";
 import Header from '../../components/Header';
 import './home.scss';
 const Home = () => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0);                      //useState
     const [myinfo, setUserForm] = useState<UserFormItem>({
         id: 3,
         label: 'Soda'
