@@ -1,4 +1,4 @@
-import React, { EventHandler } from "react";
+import React, { EventHandler, MouseEvent, MouseEventHandler } from "react";
 import { useState, useEffect } from "react";
 import { userFormData, UserFormItem } from "./userform";
 import { useWindowListener } from "./useWindowListener";   // custom useEffect hook

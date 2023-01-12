@@ -5,6 +5,18 @@
 Hooks let you use different React features from your components. You can either use the built-in Hooks or combine them to build your own. This page lists all the built-in Hooks in React.
 
 
+
+
+## Create React-App with typescript scss using Yarn
+
+```shell
+npx create-react-app my-app --template typescript
+```
+or
+
+```shell
+yarn create react-app my-app --template typescript
+```
 ## Installation
 
 In the project directory, you can run:

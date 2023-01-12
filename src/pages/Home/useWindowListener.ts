@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { EventEmitter } from 'stream';
 
 
-export function useWindowListener(eventType: any, listener: any) {
+export function useWindowListener(eventType: string, listener: EventListener) {
     useEffect(() => {
         window.addEventListener(eventType, listener);
         return () => {
