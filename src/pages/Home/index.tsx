@@ -1,5 +1,5 @@
 import React, { EventHandler, MouseEvent, MouseEventHandler } from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { userFormData, UserFormItem } from "./userform";
 import { useWindowListener } from "./useWindowListener";   // custom useEffect hook
 import Header from '../../components/Header';
@@ -10,10 +10,20 @@ const Home = () => {
         id: 3,
         label: 'Soda'
     });
+    const [value, setValue] = useState(0);
+    const ref = useRef(0);
     const [position, setPosition] = useState({x: -50, y: -50});  // pointer_position useState
     const handleIncrease = () => {
         setCount(count + 1);
     };
+    const handleIncrement = () => {
+        ref.current ++;
+        setValue(value + 1);
+    }
+    const handleDecrement = () => {
+        ref.current ++;
+        setValue(value - 1);
+    }
     const items = userFormData.map(item => (
         <div key={item.id} className="flex flex-col items-center m-5 w-44 border-2 liquid">
             <p className="p-5">{item.id}</p>
@@ -49,6 +59,14 @@ const Home = () => {
                 </div>
                 <div className="flex justify-center decoration-white text-2xl">
                     {items}
+                </div>
+                <div className="flex flex-col justify-center decoration-white text-2xl">
+                    <div className="flex justify-center m-8">
+                        <button className="btn mr-5 w-16" onClick={handleIncrement}>+</button>
+                        <button className="btn mr-5 w-16" onClick={handleDecrement}>-</button>
+                    </div>
+                    <div className="justify-center flex mb-8 col-wheat">Count  : {value}</div>
+                    <div className="col-wheat">Buttons {ref.current} times clicked</div>
                 </div>
             </div>
         </>

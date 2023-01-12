@@ -17,6 +17,8 @@ or
 ```shell
 yarn create react-app my-app --template typescript
 ```
+
+
 ## Installation
 
 In the project directory, you can run:
